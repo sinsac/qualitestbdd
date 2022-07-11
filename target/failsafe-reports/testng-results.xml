@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-11T18:50:18Z" name="Environment config tsts" finished-at="2022-07-11T18:50:26Z" duration-ms="8897">
+    <groups>
+      <group name="cucumber">
+        <method signature="Runner.run_scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:selenium_tests.Runner@50a7bc6e]" name="run_scenario" class="selenium_tests.Runner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-07-11T18:50:18Z" name="windows chrome - no tags (all features)" finished-at="2022-07-11T18:50:26Z" duration-ms="8897">
+      <class name="selenium_tests.Runner">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:selenium_tests.Runner@50a7bc6e]" started-at="2022-07-11T19:50:18Z" name="setup" finished-at="2022-07-11T19:50:23Z" duration-ms="5813" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="tear_down()[pri:0, instance:selenium_tests.Runner@50a7bc6e]" started-at="2022-07-11T19:50:24Z" name="tear_down" finished-at="2022-07-11T19:50:26Z" duration-ms="2888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_down -->
+      </class> <!-- selenium_tests.Runner -->
+    </test> <!-- windows chrome - no tags (all features) -->
+  </suite> <!-- Environment config tsts -->
+</testng-results>

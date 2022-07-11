@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" parallel="tests" name="Failed suite [Environment config tsts]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="selenium_tests.Listeners"/>
+  </listeners>
+  <test parallel="tests" name="windows edge - no tags (all features)(failed)">
+    <parameter name="browser" value="edge"/>
+    <parameter name="operating_system" value="windows"/>
+    <classes>
+      <class name="selenium_tests.Runner">
+        <methods>
+          <include name="tear_down"/>
+          <include name="run_scenario"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- selenium_tests.Runner -->
+    </classes>
+  </test> <!-- windows edge - no tags (all features)(failed) -->
+  <test parallel="tests" name="windows chrome - no tags (all features)(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="operating_system" value="windows"/>
+    <classes>
+      <class name="selenium_tests.Runner">
+        <methods>
+          <include name="tear_down"/>
+          <include name="run_scenario"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- selenium_tests.Runner -->
+    </classes>
+  </test> <!-- windows chrome - no tags (all features)(failed) -->
+  <test parallel="tests" name="windows firefox - no tags (all features)(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="operating_system" value="windows"/>
+    <classes>
+      <class name="selenium_tests.Runner">
+        <methods>
+          <include name="tear_down"/>
+          <include name="run_scenario"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- selenium_tests.Runner -->
+    </classes>
+  </test> <!-- windows firefox - no tags (all features)(failed) -->
+</suite> <!-- Failed suite [Environment config tsts] -->
