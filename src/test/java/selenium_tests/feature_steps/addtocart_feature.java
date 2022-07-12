@@ -52,7 +52,7 @@ public class addtocart_feature {
 	@Then("he see {int} items in the cart")
 	public void he_see_items_in_the_cart(Integer int1) throws Throwable{
 	    // Write code here that turns the phrase above into concrete actions
-		
+		Assert.assertTrue(driver.get().esm.check_text_exists("Cart"));
 		int items = driver.get().esm.count_matching_elements(AddToCard_POM.txtQty);
 		Assert.assertEquals(items, 4);
 		

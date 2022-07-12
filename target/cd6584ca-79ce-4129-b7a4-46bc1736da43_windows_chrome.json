@@ -1,0 +1,180 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "The user add 4 items into the basket",
+        "description": "",
+        "id": "cart;the-user-add-4-items-into-the-basket",
+        "after": [
+          {
+            "result": {
+              "duration": 273600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Listeners.save_cucumber_scenario_details(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 48935100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "customer is on product page",
+            "match": {
+              "location": "addtocart_feature.customer_is_on_product_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1849381900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "product page is accessible",
+            "match": {
+              "location": "addtocart_feature.product_page_is_accessible()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6074472500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "he added four items in the card",
+            "match": {
+              "location": "addtocart_feature.he_added_four_items_in_the_card()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [4] but found [0]\r\n\tat org.testng.Assert.fail(Assert.java:93)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:512)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:134)\r\n\tat org.testng.Assert.assertEquals(Assert.java:115)\r\n\tat org.testng.Assert.assertEquals(Assert.java:388)\r\n\tat org.testng.Assert.assertEquals(Assert.java:398)\r\n\tat selenium_tests.feature_steps.addtocart_feature.he_see_items_in_the_cart(addtocart_feature.java:57)\r\n\tat ✽.he see 4 items in the cart(src/test/resources/Features/AddtoCart.feature:9)\r\n",
+              "duration": 70822100,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "he see 4 items in the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 7
+                }
+              ],
+              "location": "addtocart_feature.he_see_items_in_the_cart(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cart"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "The user remove 1 items from the basket",
+        "description": "",
+        "id": "cart;the-user-remove-1-items-from-the-basket",
+        "after": [
+          {
+            "result": {
+              "duration": 95400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Listeners.save_cucumber_scenario_details(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 36383300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "customer is on product page",
+            "match": {
+              "location": "addtocart_feature.customer_is_on_product_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1861564800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "product page is accessible",
+            "match": {
+              "location": "addtocart_feature.product_page_is_accessible()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),\u0027×\u0027)] (tried for 15 second(s) with 500 milliseconds interval)\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)\r\n\tat selenium_tests.Webdriver_builder$Enhanced_selenium_methods.wait_element_exists(Webdriver_builder.java:548)\r\n\tat selenium_tests.Webdriver_builder$Enhanced_selenium_methods.click(Webdriver_builder.java:412)\r\n\tat selenium_tests.feature_steps.addtocart_feature.he_removed_items_from_the_cart(addtocart_feature.java:66)\r\n\tat ✽.he removed 1 items from the cart(src/test/resources/Features/AddtoCart.feature:15)\r\nCaused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),\u0027×\u0027)]\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.12.0\u0027, revision: \u00277c6e0b3\u0027, time: \u00272018-05-08T14:04:26.12Z\u0027\nSystem info: host: \u0027LGB03000619\u0027, ip: \u0027172.21.96.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002715.0.1\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)\r\n\tat java.base/java.util.Optional.orElseThrow(Optional.java:401)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)\r\n\tat selenium_tests.Webdriver_builder$Enhanced_selenium_methods.wait_element_exists(Webdriver_builder.java:548)\r\n\tat selenium_tests.Webdriver_builder$Enhanced_selenium_methods.click(Webdriver_builder.java:412)\r\n\tat selenium_tests.feature_steps.addtocart_feature.he_removed_items_from_the_cart(addtocart_feature.java:66)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:48)\r\n\tat cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:55)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:42)\r\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:47)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:44)\r\n\tat cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)\r\n\tat selenium_tests.Runner.run_scenario(Runner.java:149)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:661)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:744)\r\n\tat org.testng.TestRunner.run(TestRunner.java:602)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:380)\r\n\tat org.testng.SuiteRunner.access$000(SuiteRunner.java:39)\r\n\tat org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)\r\n\tat org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)\r\n\tat java.base/java.lang.Thread.run(Thread.java:832)\r\n",
+              "duration": 15097333600,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "he removed 1 items from the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 11
+                }
+              ],
+              "location": "addtocart_feature.he_removed_items_from_the_cart(Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "he see 3 items in the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 7
+                }
+              ],
+              "location": "addtocart_feature.he_see_items_in_the_cart(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Cart"
+          }
+        ]
+      }
+    ],
+    "name": "Cart",
+    "description": "\t\t The user has ability to add and remove items from the cart.",
+    "id": "cart",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/AddtoCart.feature",
+    "tags": []
+  }
+]

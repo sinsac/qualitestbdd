@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "result">customer is on product page (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">product page is accessible (PASSED : 1s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">he added four items in the card (PASSED : 6s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">he see 4 items in the cart (FAILED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">customer is on product page (PASSED : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">product page is accessible (PASSED : 1s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">he removed 1 items from the cart (FAILED : 15s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">he see 3 items in the cart (SKIPPED)</div>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-07-12T07:42:46Z" name="Environment config tsts" finished-at="2022-07-12T07:43:23Z" duration-ms="37465">
+    <groups>
+      <group name="cucumber">
+        <method signature="Runner.run_scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:selenium_tests.Runner@50a7bc6e]" name="run_scenario" class="selenium_tests.Runner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-07-12T07:42:46Z" name="windows chrome - no tags (all features)" finished-at="2022-07-12T07:43:23Z" duration-ms="37465">
+      <class name="selenium_tests.Runner">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:selenium_tests.Runner@50a7bc6e]" started-at="2022-07-12T08:42:46Z" name="setup" finished-at="2022-07-12T08:42:51Z" duration-ms="5437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="run_scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:selenium_tests.Runner@50a7bc6e]" started-at="2022-07-12T08:42:52Z" name="run_scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-12T08:43:02Z" duration-ms="10614" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["The user add 4 items into the basket"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [4] but found [0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [4] but found [0]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:388)
+	at org.testng.Assert.assertEquals(Assert.java:398)
+	at selenium_tests.feature_steps.addtocart_feature.he_see_items_in_the_cart(addtocart_feature.java:57)
+	at ✽.he see 4 items in the cart(src/test/resources/Features/AddtoCart.feature:9)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">customer is on product page (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">product page is accessible (PASSED : 1s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">he added four items in the card (PASSED : 6s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">he see 4 items in the cart (FAILED : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run_scenario -->
+        <test-method signature="run_scenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:selenium_tests.Runner@50a7bc6e]" started-at="2022-07-12T08:43:02Z" name="run_scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-07-12T08:43:20Z" duration-ms="17089" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["The user remove 1 items from the basket"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'×')] (tried for 15 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'×')] (tried for 15 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.wait_element_exists(Webdriver_builder.java:548)
+	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.click(Webdriver_builder.java:412)
+	at selenium_tests.feature_steps.addtocart_feature.he_removed_items_from_the_cart(addtocart_feature.java:66)
+	at ✽.he removed 1 items from the cart(src/test/resources/Features/AddtoCart.feature:15)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),'×')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'LGB03000619', ip: '172.21.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:401)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.wait_element_exists(Webdriver_builder.java:548)
+	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.click(Webdriver_builder.java:412)
+	at selenium_tests.feature_steps.addtocart_feature.he_removed_items_from_the_cart(addtocart_feature.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:48)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at selenium_tests.Runner.run_scenario(Runner.java:149)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div "result">customer is on product page (PASSED : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">product page is accessible (PASSED : 1s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">he removed 1 items from the cart (FAILED : 15s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">he see 3 items in the cart (SKIPPED)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run_scenario -->
+        <test-method is-config="true" signature="tear_down()[pri:0, instance:selenium_tests.Runner@50a7bc6e]" started-at="2022-07-12T08:43:20Z" name="tear_down" finished-at="2022-07-12T08:43:23Z" duration-ms="3619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_down -->
+      </class> <!-- selenium_tests.Runner -->
+    </test> <!-- windows chrome - no tags (all features) -->
+  </suite> <!-- Environment config tsts -->
+</testng-results>

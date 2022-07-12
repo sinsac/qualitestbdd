@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Cucumber-JVM Html Reports - Feature: Cart </title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="blue/css/text.css" type="text/css" media="screen" />
+<link rel="shortcut icon" href="blue/favicon.ico" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<style>
+
+h2 {
+	font-size: 24px !important;
+}
+
+.feature-keyword {
+	font-weight: bold;
+}
+
+.feature-description {
+	padding-left: 15px;
+	font-style: italic;
+	background-color: beige;
+}
+
+.feature-role {
+	font-weight: bold;
+}
+
+.feature-action {
+	font-weight: bold;
+}
+
+.feature-value {
+	font-weight: bold;
+}
+
+.feature-tags {
+	padding-top: 10px;
+	padding-left: 15px;
+	color: darkblue;
+}
+
+.element-keyword {
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.element-element_name {
+	padding-left: 15px;
+}
+
+.step-keyword {
+	font-weight: bold;
+	padding-left: 50px;
+}
+
+.error_message {
+	background-color: #FFEEEE;
+	padding-left: 50px;
+	border: 1px solid #D88A8A;
+	margin-bottom: 5px;
+	overflow: auto;
+}
+
+.error_collapse {
+	display:none;
+	padding-left: 10px;
+}
+
+.error_collapse + label {
+	font-size: 15px;
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	padding-top: 2px;
+}
+
+.error_collapse + label + * {
+	display: none;
+    padding-left: 25px;
+}
+
+.error_collapse:checked + label + * {
+	display: block;
+}
+
+.error_collapse + label:before {
+	background-color: #4F5150;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	color: #FFFFFF;
+	content: "+";
+	display: block;
+	float: left;
+	line-height: 20px;
+	width: 20px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.error_collapse:checked + label:before {
+	content: "\2212";
+}
+
+.step-duration {
+	float: right;
+	padding-right: 15px;
+}
+
+.passed {
+	background-color: #C5D88A;
+}
+
+.failed {
+	background-color: #D88A8A;
+}
+
+.skipped {
+	background-color: #88AAFF;
+}
+
+.pending {
+	background-color: #FBB907;
+}
+
+.undefined {
+	background-color: #FBB987;
+}
+
+.missing {
+	background-color: #FBB9D7;
+}
+
+table.stats-table {
+	color: black;
+	width: 100%;
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: gray;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+table.stats-table th {
+	color: black;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: gray;
+	background-color: #66CCEE;
+	-moz-border-radius:;
+}
+
+table.stats-table td {
+	color: black;
+	text-align: center;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius:;
+}
+
+table.data-table {
+	color: black;
+	border-width: 1px;
+	border-spacing: 2px;
+	border-style: outset;
+	border-color: #d6d6d6;
+	border-collapse: collapse;
+	background-color: beige;
+}
+
+table.data-table th {
+	color: black;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: #d6d6d6;
+	background-color: #66CCEE;
+}
+
+table.data-table td {
+	color: black;
+	text-align: center;
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: #d6d6d6;
+	background-color: beige;
+}
+
+.data {
+	padding-left: 50px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.output-data {
+	padding-left: 50px;
+	background-color: beige;
+	text-indent: 50px;
+}
+
+.doc-string {
+	width: auto;
+	display: inline-block;
+	margin: 10px auto 10px 70px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.35);
+	border-radius: 10px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 95%;
+}
+
+.graph {
+	margin-bottom: 50px;
+	margin-top: 30px;
+	clear: both;
+	font-family: georgia, serif;
+	font-size: 14px;
+}
+
+.graph-header h3 {
+	margin-bottom: 0px;
+}
+
+.graph-header {
+	text-align: center;
+}
+
+.graph-header p {
+	margin-top: 0px;
+}
+
+.graph .legend td, .graph .legend, .graph .legend tr {
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+.graph .legend {
+	margin-left: 10px;
+}
+
+.graph .legend td {
+	padding-right: 5px;
+}
+
+.graph .legend .color-box {
+	width: 14px;
+	height: 10px;
+	overflow: hidden;
+}
+
+.graph .label {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	position: absolute;
+	right: -5px;
+	top: 15px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+
+table#tablesorter thead tr th {
+	cursor: pointer;
+}
+
+</style>
+</head>
+<body id="top">
+
+     <div id="fullwidth_header">
+     <div class="container_12">
+         <h1 class="grid_4 logo"><a href="feature-overview.html" class='ie6fix'>Cucumber</a></h1>
+
+         <div id="nav">
+             <ul>
+                                  <li><a href="tag-overview.html">Tags</a></li>
+                 <li><a href="feature-overview.html">Feature</a></li>
+                 <li><a href="step-overview.html">Steps</a></li>
+             </ul>
+         </div>
+     </div>
+</div>
+
+        <div id="fullwidth_gradient">
+    <div class="container_12">
+        <div class="grid_9 heading">
+            <h2 id="feature-title">Result for <span style="color:#66CCEE;"><i>Cart</i></span> in build: 1</h2>
+        </div>
+    </div>
+</div>
+
+    <div class="container_12">
+        <div class="grid_12">
+
+            <div>
+                <table class="stats-table">
+                                        <thead>
+    <tr>
+                    <th></th>
+                <th></th>
+        <th id="stats-header-scenarios" colspan="3">Scenarios</th>
+        <th id="stats-header-steps" colspan="7">Steps</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+            <th id="stats-header-key">Feature</th>
+                            <th id="stats-header-device">Device</th>
+                        <th id="stats-header-scenarios-total">Total</th>
+            <th id="stats-header-scenarios-passed">Passed</th>
+            <th id="stats-header-scenarios-failed">Failed</th>
+            <th id="stats-header-steps-total">Total</th>
+            <th id="stats-header-steps-passed"    style="background-color:#00CE00;">Passed</th>
+            <th id="stats-header-steps-failed"    style="background-color:#FF0000;">Failed</th>
+            <th id="stats-header-steps-skipped"   style="background-color:#88AAFF;">Skipped</th>
+            <th id="stats-header-steps-pending"   style="background-color:#FBB907;">Pending</th>
+            <th id="stats-header-steps-undefined" style="background-color:#FBB957;">Undefined</th>
+            <th id="stats-header-steps-missing"   style="background-color:#FBB9A7;">Missing</th>
+            <th id="stats-header-duration">Duration</th>
+            <th id="stats-header-status">Status</th>
+    </tr>
+</thead>
+                    
+                    
+                    <tr>
+                        <td><a id="stats-Cart" href="src-test-resources-Features-AddtoCart-feature-46bc1736da43_windows_chrome.html">Cart</a></td>
+                                                  <td id="device">46bc1736da43_windows_chrome</td>
+                                                <td id="stats-number-scenarios-Cart">2</td>
+                        <td id="stats-number-scenarios-passed-Cart">0</td>
+                        <td id="stats-number-scenarios-failed-Cart">2</td>
+                        <td id="stats-number-steps-Cart">8</td>
+                        <td id="stats-number-steps-passed-Cart">5</td>
+                        <td id="stats-number-steps-failed-Cart"      style="background-color:#FF0000;" >2</td>
+                        <td id="stats-number-steps-skipped-Cart"      style="background-color:#88AAFF;" >1</td>
+                        <td id="stats-number-steps-pending-Cart"   >0</td>
+                        <td id="stats-number-steps-undefined-Cart" >0</td>
+                        <td id="stats-number-steps-missing-Cart"   >0</td>
+                        <td id="stats-duration-Cart" style="text-align:right;white-space:nowrap">25s 038ms</td>
+                        <td id="stats-status-Cart" style="background-color: #FF0000;">failed</td></tr>
+
+                </table>
+
+            </div>
+
+        <div style="color:black;">
+
+            <div class="feature-tags"></div>
+            <div class="failed"><div class="feature-line"><span class="feature-keyword">Feature: </span>Cart</div></div>
+            <i>		 The user has ability to add and remove items from the cart.</i>
+
+                            <div class="feature-tags"><a href="Cart.html">@Cart</a></div>
+                
+                <div class="failed"><span class="element-keyword">Scenario: </span><span class="element-name">The user add 4 items into the basket</span></div>
+                                    <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">customer is on product page</span><span class="step-duration">048ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="passed"><span class="step-keyword">When  </span><span class="step-name">product page is accessible</span><span class="step-duration">01s 849ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="passed"><span class="step-keyword">And  </span><span class="step-name">he added four items in the card</span><span class="step-duration">06s 074ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="failed"><span class="step-keyword">Then  </span><span class="step-name">he see 4 items in the cart</span><span class="step-duration">070ms</span><pre class="error_message"><input class="error_collapse" id="error_1314347303" type="checkbox"><label for="error_1314347303">java.lang.AssertionError: expected [4] but found [0]</label><div>	at org.testng.Assert.fail(Assert.java:93)<br/>	at org.testng.Assert.failNotEquals(Assert.java:512)<br/>	at org.testng.Assert.assertEqualsImpl(Assert.java:134)<br/>	at org.testng.Assert.assertEquals(Assert.java:115)<br/>	at org.testng.Assert.assertEquals(Assert.java:388)<br/>	at org.testng.Assert.assertEquals(Assert.java:398)<br/>	at selenium_tests.feature_steps.addtocart_feature.he_see_items_in_the_cart(addtocart_feature.java:57)<br/>	at ✽.he see 4 items in the cart(src/test/resources/Features/AddtoCart.feature:9)<br/></div></pre></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                <div class="passed"><span class="step-keyword">After </span><i>Listeners.save_cucumber_scenario_details(Scenario)</i><span class="step-duration"></span></div>
+                            <div class="feature-tags"><a href="Cart.html">@Cart</a></div>
+                
+                <div class="failed"><span class="element-keyword">Scenario: </span><span class="element-name">The user remove 1 items from the basket</span></div>
+                                    <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">customer is on product page</span><span class="step-duration">036ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="passed"><span class="step-keyword">When  </span><span class="step-name">product page is accessible</span><span class="step-duration">01s 861ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="failed"><span class="step-keyword">And  </span><span class="step-name">he removed 1 items from the cart</span><span class="step-duration">15s 097ms</span><pre class="error_message"><input class="error_collapse" id="error_484465481" type="checkbox"><label for="error_484465481">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //a[contains(text(),'×')] (tried for 15 second(s) with 500 milliseconds interval)</label><div>	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)<br/>	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)<br/>	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.wait_element_exists(Webdriver_builder.java:548)<br/>	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.click(Webdriver_builder.java:412)<br/>	at selenium_tests.feature_steps.addtocart_feature.he_removed_items_from_the_cart(addtocart_feature.java:66)<br/>	at ✽.he removed 1 items from the cart(src/test/resources/Features/AddtoCart.feature:15)<br/>Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),'×')]<br/>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'<br/>System info: host: 'LGB03000619', ip: '172.21.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'<br/>Driver info: driver.version: unknown<br/>	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)<br/>	at java.base/java.util.Optional.orElseThrow(Optional.java:401)<br/>	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)<br/>	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)<br/>	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)<br/>	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)<br/>	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)<br/>	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.wait_element_exists(Webdriver_builder.java:548)<br/>	at selenium_tests.Webdriver_builder$Enhanced_selenium_methods.click(Webdriver_builder.java:412)<br/>	at selenium_tests.feature_steps.addtocart_feature.he_removed_items_from_the_cart(addtocart_feature.java:66)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at cucumber.runtime.Utils$1.call(Utils.java:26)<br/>	at cucumber.runtime.Timeout.timeout(Timeout.java:16)<br/>	at cucumber.runtime.Utils.invoke(Utils.java:20)<br/>	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:48)<br/>	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)<br/>	at cucumber.runner.TestStep.executeStep(TestStep.java:55)<br/>	at cucumber.runner.TestStep.run(TestStep.java:42)<br/>	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)<br/>	at cucumber.runner.TestCase.run(TestCase.java:47)<br/>	at cucumber.runner.Runner.runPickle(Runner.java:44)<br/>	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)<br/>	at selenium_tests.Runner.run_scenario(Runner.java:149)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br/>	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:564)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br/>	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)<br/>	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br/>	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br/>	at org.testng.TestRunner.privateRun(TestRunner.java:744)<br/>	at org.testng.TestRunner.run(TestRunner.java:602)<br/>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br/>	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)<br/>	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)<br/>	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br/>	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)<br/>	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)<br/>	at java.base/java.lang.Thread.run(Thread.java:832)<br/></div></pre></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                    <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">he see 3 items in the cart</span><span class="step-duration">000ms</span></div>
+                    
+                                        <div class="output-data">
+                                        </div>
+                                <div class="passed"><span class="step-keyword">After </span><i>Listeners.save_cucumber_scenario_details(Scenario)</i><span class="step-duration"></span></div>
+                </div>
+</div>
+
+
+<div class="container_12">
+    <div class="grid_12 hr"></div>
+    <div class="grid_12">
+        <p style="text-align:center">
+            <a href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+            <a href="https://github.com/damianszczepanik/cucumber-reporting">Cucumber reports</a>
+            <br>build: 12-07-2022 08:43:22</p>
+    </div>
+</div>
+
+</body>
+</html>
