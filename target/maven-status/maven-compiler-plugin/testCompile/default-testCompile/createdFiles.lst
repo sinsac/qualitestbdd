@@ -1,8 +1,0 @@
-selenium_tests\External_data_reader.class
-selenium_tests\page_object_model\AddToCard_POM.class
-selenium_tests\Report_generator.class
-selenium_tests\feature_steps\addtocart_feature.class
-selenium_tests\Webdriver_builder$Enhanced_selenium_methods.class
-selenium_tests\Listeners.class
-selenium_tests\Runner.class
-selenium_tests\Webdriver_builder.class

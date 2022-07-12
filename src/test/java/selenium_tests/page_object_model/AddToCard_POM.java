@@ -11,5 +11,11 @@ public final class AddToCard_POM {
 	public static By btnCart = By.xpath("//a[contains(text(),'Cart')]");	
 	public static By btnRemove = By.xpath("//a[contains(text(),'×')]");	
 	
+	public static By btnShop = By.xpath("(//a[contains(text(),'Shop')])[2]");	
+	
+	public static By txtQty = By.xpath("//input[@id='quantity_62*']");	
+	
+	
+	
 
 }
